@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   {% load staticfiles %}
+   {% load bootstrap3 %}
+   {% bootstrap_css %}
+   <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+   <script src="{% static 'js/jquery-1.11.3.min.js' %}"></script>
+   {% bootstrap_javascript %}
+   <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+   <title>{% block title %}Spartan{% endblock %}</title>
+</head>
+<body>
+<header>
+    <nav>
+      {% block nav %}
+      <div id="home-nav" class="row">
+        <div class="menu">
+          {% if request.session.user_id %}
+          <a href="{% url 'lists:Profil' %}" class="connect">{{ request.session.user_prenom }} {{ request.session.user_name }}</a>
+          <a href="{% url 'home:logout' %}" class="connect">Déconnexion</a>
+          {% else %}
+          <a href="{% url 'home:login' %}" class="connect">Connexion</a>
+          <a href="{% url 'home:newsign' %}" class="connect">Inscription</a>
+          {% endif %}
+        </div>
+      </div>
+      {% endblock %}
+   </nav>
+  </header>
+   <section id="content">
+       {% block content %}{% endblock %}
+   </section>
+<footer>qsdqdqsdqd</footer>
+</body>
+</html>

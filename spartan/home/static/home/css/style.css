@@ -1,0 +1,170 @@
+html{
+	margin:0;
+	padding:0;
+	background: url(/static/home/img/cover.jpe) no-repeat center fixed; 
+	-webkit-background-size: cover; /* pour anciens Chrome et Safari */
+	background-size: cover; /* version standardisée */
+}
+body{
+	background: none;
+	background: transparent;
+}
+#home-nav{
+	margin: 0 auto;
+	padding: 0px;
+	background-color: #333333;
+	height: 60px;
+	line-height: 60px;
+	color: #ffffff;
+	opacity: 0.5;
+}
+.menu{
+	font-family: 'Open Sans', sans-serif;
+	float: right;
+	padding-right: 15px;
+}
+.menu a{
+	text-decoration: none;
+	color: #ffffff;
+}
+.menu a:hover{
+	color: #FF6600;
+	/*opacity: 1;*/
+}
+#home-content{
+	margin: 0 auto;
+	padding: 0px;
+	margin-top: 10%;
+	text-align: center;
+}
+#home-content h1{
+	font-family: 'Poiret One', cursive;
+	text-align: center;
+	color: #000000;
+	font-size: 45px;
+}
+.title{
+	padding-bottom: 10px;
+}
+.button{
+	font-family: 'Open Sans', sans-serif;
+}
+.button a{
+	width: 200px;
+}
+#home-content-sign{
+	margin: 0 auto;
+	padding: 0px;
+	margin-top: 10%;
+	text-align: center;
+	display: none;
+}
+#home-content-sign h2{
+	font-family: 'Poiret One', cursive;
+	color: #000000;
+	font-size: 45px;
+}
+#home-content-sign-2{
+	margin: 0 auto;
+	padding: 0px;
+	margin-top: 10%;
+	text-align: center;
+}
+#home-content-sign-2 h2{
+	font-family: 'Poiret One', cursive;
+	color: #000000;
+	font-size: 45px;
+}
+.input-sign{
+	padding-bottom: 5px;
+}
+.input-sign input{
+	width: 400px;
+	height: 40px;
+	display: inline;
+}
+.button-sign button{
+	width: 400px;
+	display: inline;
+}
+.nav-sign{
+	padding-top: 10px;
+}
+.nav-sign a{
+	text-decoration: none;
+	color: #ffffff;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#home-content-connect{
+	margin: 0 auto;
+	padding: 0px;
+	margin-top: 10%;
+	text-align: center;
+	display: none;
+}
+#home-content-connect h2{
+	font-family: 'Poiret One', cursive;
+	color: #000000;
+	font-size: 45px;
+}
+#home-content-connect-2{
+	margin: 0 auto;
+	padding: 0px;
+	margin-top: 10%;
+	text-align: center;
+}
+#home-content-connect-2 h2{
+	font-family: 'Poiret One', cursive;
+	color: #000000;
+	font-size: 45px;
+}
+.input-connect{
+	padding-bottom: 5px;
+}
+.input-connect input{
+	width: 400px;
+	height: 40px;
+	display: inline;
+}
+.button-connect button{
+	width: 400px;
+	display: inline;
+}
+.nav-connect{
+	padding-top: 10px;
+}
+.nav-connect a{
+	text-decoration: none;
+	color: #000000;
+	font-family: 'Open Sans', sans-serif;
+}
+.form-control{
+	border-radius: 0px;
+}
+.btn{
+	border-radius: 0px;
+}
+.btn-default{
+	background-color: #FF6600;
+	color: #ffffff;
+	border-color: #FF6600;
+}
+.btn-default:hover{
+	background-color: #cccccc;
+	color: #FF6600;
+	border-color: #FF6600;
+}
+#connect{
+	padding-right: 10px;
+}
+#connect:hover{
+	color: #FF6600;
+}
+#sign:hover{
+	color: #FF6600;
+}
+.retour{
+	padding-right: 10px;
+	display: none;
+}

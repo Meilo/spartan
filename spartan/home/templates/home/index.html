@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+{% load staticfiles %}
+{% load bootstrap3 %}
+{% bootstrap_css %}
+<link rel="stylesheet" href="{% static 'home/css/style.css' %}" />
+<script src="{% static 'home/js/jquery-1.11.3.min.js' %}"></script>
+<script src="{% static 'home/js/main.js' %}"></script>
+<link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<title>{% block title %}Spartan{% endblock %}</title>
+</head>
+<body>
+<header>
+    <nav>
+    {% block nav %}
+		<div id="home-nav" class="row">
+			<div class="menu">
+			<a href="#" class="retour"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Retour</a><a href="#" id="connect">Se connecter</a><a href="#" id="sign">S'inscrire</a>
+			</div>
+		</div>
+	{% endblock %}
+	</nav>
+</header>
+<section id="content">
+	{% block content %}
+	<div id="home-content" class="row">
+		<div class="col-md-12 title">
+			<h1>Créez vos listes avec Spartan</h1>
+		</div>
+		<div class="col-md-12 button">
+			<a class="btn btn-default btn-lg" href="{% url 'lists:CreateList' %}" role="button">Créer ma liste</a>
+		</div>
+	</div>
+	<form method="POST" action="{% url 'home:sign' %}">
+	{% csrf_token %}
+	<div id="home-content-sign" class="row">
+		<div class="col-md-12 title-sign">
+			<h2>S'inscire</h2>
+		</div>
+		<div class="col-md-12 input-sign">
+			<input type="text" class="form-control" name="nom" placeholder="Nom" required/>
+		</div>
+		<div class="col-md-12 input-sign">
+			<input type="text" class="form-control" name="prenom" placeholder="Prénom" required/>
+		</div>
+		<div class="col-md-12 input-sign">
+			<input type="email" class="form-control" name="email" placeholder="Email" required/>
+		</div>
+		<div class="col-md-12 input-sign">
+			<input type="password" class="form-control" name="mdp" placeholder="Mot de passe" required/>
+		</div>
+		<div class="col-md-12 button-sign">
+			<button class="btn btn-default btn-lg btn-block" role="button">Enregister</button>
+		</div>
+	</div>
+	</form>
+	<form method="POST" action="{% url 'home:Index' %}">
+	{% csrf_token %}
+	<div id="home-content-connect" class="row">
+		<div class="col-md-12 title-connect">
+			<h2>Se connecter</h2>
+		</div>
+		<div class="col-md-12 input-connect">
+			<input type="text" class="form-control" name="email" placeholder="Email" />
+		</div>
+		<div class="col-md-12 input-connect">
+			<input type="password" class="form-control" name="mdp" placeholder="Mot de passe" />
+		</div>
+		<div class="col-md-12 button-connect">
+			<button class="btn btn-default btn-lg btn-block" role="button">Connexion</button>
+		</div>
+	</div>
+	</form>
+	{% endblock %}
+</section>
+<footer></footer>
+</body>
+</html>

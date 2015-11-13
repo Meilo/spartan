@@ -1,0 +1,33 @@
+{% extends "home/index.html" %}
+{% block nav %}
+<div id="home-nav" class="row">
+	<div class="menu">
+		<a href="{% url 'lists:CreateList' %}" id="connect">Créer ma liste</a><a href="{% url 'home:login' %}" id="sign">Se connecter</a>
+	</div>
+</div>
+{% endblock %}
+{% block content %}
+<form method="POST" action="{% url 'home:sign' %}">
+	{% csrf_token %}
+	<div id="home-content-sign-2" class="row">
+		<div class="col-md-12 title-sign">
+			<h2>S'inscire</h2>
+		</div>
+		<div class="col-md-12 input-sign">
+			<input type="text" class="form-control" name="nom" placeholder="Nom" required/>
+		</div>
+		<div class="col-md-12 input-sign">
+			<input type="text" class="form-control" name="prenom" placeholder="Prénom" required/>
+		</div>
+		<div class="col-md-12 input-sign">
+			<input type="email" class="form-control" name="email" placeholder="Email" required/>
+		</div>
+		<div class="col-md-12 input-sign">
+			<input type="password" class="form-control" name="mdp" placeholder="Mot de passe" required/>
+		</div>
+		<div class="col-md-12 button-sign">
+			<button class="btn btn-default btn-lg btn-block" role="button">Enregister</button>
+		</div>
+	</div>
+</form>
+{% endblock %}
