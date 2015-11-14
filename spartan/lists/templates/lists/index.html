@@ -10,8 +10,8 @@
 		<div id="filter">
 			<input type="text" class="form-control" name="search" placeholder="Recherche" />
 		</div>
-		<div id="drag1" draggable="true" ondragstart="drag(event)" class="produit">
-			<p>Produit 1</p>
+		<div  class="produit">
+			<p id="drag1" draggable="true" ondragstart="drag(event)">Produit 1</p>
 		</div>
 		<div class="produit">
 			<p>Produit 2</p>
@@ -24,51 +24,6 @@
 		</div>
 		<div class="produit">
 			<p>Produit 5</p>
-		</div>
-		<div class="produit">
-			<p>Produit 6</p>
-		</div>
-		<div class="produit">
-			<p>Produit 7</p>
-		</div>
-		<div class="produit">
-			<p>Produit 8</p>
-		</div>
-		<div class="produit">
-			<p>Produit 9</p>
-		</div>
-		<div class="produit">
-			<p>Produit 10</p>
-		</div>
-		<div class="produit">
-			<p>Produit 11</p>
-		</div>
-		<div class="produit">
-			<p>Produit 12</p>
-		</div>
-		<div class="produit">
-			<p>Produit 13</p>
-		</div>
-		<div class="produit">
-			<p>Produit 14</p>
-		</div>
-		<div class="produit">
-			<p>Produit 15</p>
-		</div>
-		<div class="produit">
-			<p>Produit 16</p>
-		</div>
-		<div class="produit">
-			<p>Produit 17</p>
-		</div>
-		<div class="produit">
-			<p>Produit 18</p>
-		</div>
-		<div class="produit">
-			<p>Produit 19</p>
-		</div>
-		<div class="produit">
-			<p>Produit 20</p>
 		</div>
 	</div>
 	<div id="making-list" class="col-md-10">
@@ -91,8 +46,8 @@
 				<a href="#"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Ajouter un produit</a>
 				</div>
 			</div>
-			<div class="col-md-3">
-				<input ondrop="drop(event)" ondragover="allowDrop(event)" type="text" class="form-control" name="title-cotégorie" value="Ménagé" placeholder="Titre de catégorie" />
+			<div id="test" class="col-md-3" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="LeaveCategory(event)">
+				<input  type="text" class="form-control" name="title-cotégorie" value="Ménagé" placeholder="Titre de catégorie" />
 				<div class="produit">
 					<p>Produit 11</p>
 				</div>

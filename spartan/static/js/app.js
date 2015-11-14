@@ -4,15 +4,26 @@ $( ".add-produit" ).click(function() {
 
 function allowDrop(ev) {
     ev.preventDefault();
+    $("#"+ev.target.id).attr("style","background-color:#F60");
+}
+
+function LeaveCategory(ev) {
+    ev.preventDefault();
+    $("#"+ev.target.id).attr("style","background-color:none");
 }
 
 function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
+    ev.dataTransfer.setData("text", $('#'+ev.target.id).text());
 }
 
 function drop(ev) {
-    //ev.preventDefault();
+    ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
-    console.log(ev.dataTransfer);
-    ev.target.appendChild(document.getElementById(data));
+    console.log(ev.target.id);
+    console.log(data);
+    console.log( $("#"+ev.target.id));
+    $("#"+ev.target.id).prepend("<p>"+data+"<p>");
 }
+
+
+///document.getElementById(data)
