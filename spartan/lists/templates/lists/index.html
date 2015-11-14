@@ -10,7 +10,7 @@
 		<div id="filter">
 			<input type="text" class="form-control" name="search" placeholder="Recherche" />
 		</div>
-		<div class="produit">
+		<div id="drag1" draggable="true" ondragstart="drag(event)" class="produit">
 			<p>Produit 1</p>
 		</div>
 		<div class="produit">
@@ -92,7 +92,7 @@
 				</div>
 			</div>
 			<div class="col-md-3">
-				<input type="text" class="form-control" name="title-cotégorie" value="Ménagé" placeholder="Titre de catégorie" />
+				<input ondrop="drop(event)" ondragover="allowDrop(event)" type="text" class="form-control" name="title-cotégorie" value="Ménagé" placeholder="Titre de catégorie" />
 				<div class="produit">
 					<p>Produit 11</p>
 				</div>

@@ -1,0 +1,10 @@
+spartan/.idea/.name
+spartan/.idea/deployment.xml
+*.xml
+spartan/.idea/spartan.iml
+spartan/home/migrations/__pycache__/__init__.cpython-34.pyc
+*.pyc
+spartan/lists/__pycache__/urls.cpython-34.pyc
+spartan/home/migrations/__pycache__/__init__.cpython-34.pyc
+*.pyc
+spartan/home/__pycache__/admin.cpython-34.pyc
