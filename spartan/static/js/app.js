@@ -23,6 +23,7 @@ function drop(ev) {
     console.log(data);
     console.log( $("#"+ev.target.id));
     $("#"+ev.target.id).prepend("<p>"+data+"<p>");
+    $("#"+ev.target.id).attr("style","background-color:none");
 }
 
 
