@@ -13,7 +13,7 @@ function LeaveCategory(ev) {
 }
 
 function drag(ev) {
-    ev.dataTransfer.setData("text", $('#'+ev.target.id).text());
+    ev.dataTransfer.setData("text", $('#'+ev.target.id).children().text());
 }
 
 function drop(ev) {
