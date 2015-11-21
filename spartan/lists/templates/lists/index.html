@@ -33,41 +33,51 @@
 		<div class="row">
 			<div class="col-md-3">
 				<input type="text" class="form-control" name="title-cotégorie" value="Alimentaire" placeholder="Titre de catégorie" />
-				<div class="produit">
-					<p>Produit 18</p>
+				<div  class="DropZoneHide" id="test2" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="LeaveCategory(event)">
+
 				</div>
-				<div class="produit">
-					<p>Produit 19</p>
-				</div>
-				<div class="produit">
-					<p>Produit 20</p>
-				</div>
-				<div class="add-produit">
-				<a href="#"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Ajouter un produit</a>
+				<div id="test2Drop" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="LeaveCategory(event)">
+					<div class="produit">
+						<p>Produit 18</p>
+					</div>
+					<div class="produit">
+						<p>Produit 19</p>
+					</div>
+					<div class="produit">
+						<p>Produit 20</p>
+					</div>
+					<div class="add-produit">
+					<a href="#"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Ajouter un produit</a>
+					</div>
 				</div>
 			</div>
-			<div id="test" class="col-md-3" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="LeaveCategory(event)">
+			<div class="col-md-3">
 				<input  type="text" class="form-control" name="title-cotégorie" value="Ménagé" placeholder="Titre de catégorie" />
-				<div class="produit">
-					<p>Produit 11</p>
+				<div  class="DropZoneHide" id="test" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="LeaveCategory(event)">
+
 				</div>
-				<div class="produit">
-					<p>Produit 12</p>
-				</div>
-				<div class="produit">
-					<p>Produit 13</p>
-				</div>
-				<div class="produit">
-					<p>Produit 14</p>
-				</div>
-				<div class="produit">
-					<p>Produit 15</p>
-				</div>
-				<div class="add-produit">
-				<a href="#"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Ajouter un produit</a>
+				<div id="testDrop">
+					<div class="produit">
+						<p>Produit 11</p>
+					</div>
+					<div class="produit">
+						<p>Produit 12</p>
+					</div>
+					<div class="produit">
+						<p>Produit 13</p>
+					</div>
+					<div class="produit">
+						<p>Produit 14</p>
+					</div>
+					<div class="produit">
+						<p>Produit 15</p>
+					</div>
+					<div class="add-produit">
+					<a href="#"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Ajouter un produit</a>
+					</div>
 				</div>
 			</div>
-		</div>
+	</div>
 	</div>
 </div>
 

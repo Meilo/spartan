@@ -81,3 +81,14 @@
 	padding-left: 10px;
 	cursor:pointer;
 }
+.DropZoneHide{
+	display:none;
+	height:60px;
+	width:300px;
+}
+.DropZone{
+	display:visible;
+	height:60px;
+	width:300px;
+	background: url(/static/home/img/iconPlus.png2) no-repeat center fixed;
+}
