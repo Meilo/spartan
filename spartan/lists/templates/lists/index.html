@@ -2,28 +2,17 @@
 {% block title %}Création de liste{% endblock %}
 {% block content %}
 
+<div ng-init="produits = ['Axe Gel douche', 'Granola', 'Prince de lu', 'Orange', 'Vin de Bordeaux']"></div>
 <div id="list-content" class="row">
 	<div id="nav-filter" class="col-md-2">
 		<div id="title-filter">
 			<h2>Produits suggérés</h2>
 		</div>
 		<div id="filter">
-			<input type="text" class="form-control" name="search" placeholder="Recherche" />
+			<input type="text" ng-model="searchText" class="form-control" name="search" placeholder="Recherche" />
 		</div>
-		<div  id="drag1" draggable="true" ondragstart="drag(event)" class="produit">
-			<p>Produit 1</p>
-		</div>
-		<div class="produit">
-			<p>Produit 2</p>
-		</div>
-		<div class="produit">
-			<p>Produit 3</p>
-		</div>
-		<div class="produit">
-			<p>Produit 4</p>
-		</div>
-		<div class="produit">
-			<p>Produit 5</p>
+		<div class="produit" id="drag[[ $index ]]" draggable="true" ondragstart="drag(event)" ng-repeat="prod in produits | filter:searchText">
+			<p>[[ prod ]]</p>
 		</div>
 	</div>
 	<div id="making-list" class="col-md-10">
@@ -33,9 +22,7 @@
 		<div class="row">
 			<div class="col-md-3">
 				<input type="text" class="form-control" name="title-cotégorie" value="Alimentaire" placeholder="Titre de catégorie" />
-				<div  class="DropZoneHide" id="test2" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="LeaveCategory(event)">
-
-				</div>
+				<div  class="DropZoneHide" id="test2" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="LeaveCategory(event)"></div>
 				<div id="test2Drop" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="LeaveCategory(event)">
 					<div class="produit">
 						<p>Produit 18</p>

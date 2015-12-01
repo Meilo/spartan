@@ -4,14 +4,14 @@ $( ".add-produit" ).click(function() {
 
 function allowDrop(ev) {
     ev.preventDefault();
-    $("#"+ev.target.id).attr("style","background-color:#F60;height:60px; width:300px;");
+    $("#"+ev.target.id).attr("style","background-color:#F60;height:35px; width:100%;");
     $("#"+ev.target.id+"testSpan").attr("style","display:visible; width:100%;text-align:center;padding:6%;");
 
 }
 
 function LeaveCategory(ev) {
     ev.preventDefault();
-    $("#"+ev.target.id).attr("style","background-color:none;height:60px; width:300px;");
+    $("#"+ev.target.id).attr("style","background-color:none;height:35px; width:100%;");
 }
 
 function drag(ev) {

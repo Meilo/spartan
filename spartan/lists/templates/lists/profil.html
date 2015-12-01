@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}{{ request.session.user_prenom }} {{ request.session.user_name }}{% endblock %}
+{% block content %}
+<div id="content-body">
+<div id="content-profil" class="row">
+	<div class="col-md-2"></div>
+	<div id="info-user" class="col-md-8">
+		<h1>{{ OneUser.prenom }} {{ OneUser.nom }}</h1>
+		<div class="texte">{{ OneUser.email }}</div>
+	</div>
+	<div class="col-md-2"></div>
+</div>
+<div id="content-listing" class="row">
+	<div class="col-md-2"></div>
+	<div id="info-list" class="col-md-8">
+		<div class="listing">
+			<h2>Vos listes enregistrer</h2>
+			<div id="block-listing" class="row">
+				<div class="col-md-3 list-indiv">
+					Ma liste de course <a href="#"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></a>
+				</div>
+				<div class="col-md-offset-1 col-md-3 list-indiv">
+					Ma liste de cadeaux <a href="#"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-2"></div>
+</div>
+</div>
+{% endblock %}
